@@ -1,0 +1,70 @@
+/* <--------------- Feed ---------------> */
+
+.feed {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: hidden;
+  width: 90%;
+  max-width: 500px;
+  padding-top: 95px;
+}
+
+.feed > .spinner {
+  margin: 210px auto;
+}
+
+/* <--------------- Feed Create Post ---------------> */
+
+.feed > .feed__createPost {
+  display: flex;
+  gap: 15px;
+  width: 458px;
+  max-width: 90%;
+  padding: 0 20px;
+}
+
+.feed__createPost > .profilePhoto {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+}
+
+.feed__createPost > input {
+  flex: 1;
+  padding: 15px;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 40px;
+  background-color: #fff;
+  font-size: 17.5px;
+}
+
+.feed__createPost > input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.feed__createPost > button {
+  display: none;
+}
+
+/* <--------------- Feed Posts ---------------> */
+
+.feed > .feed__posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px 20px 100px;
+}
+
+/* <--------------- Media Query ---------------> */
+
+@media (min-width: 600px) {
+  .feed > .feed__posts {
+    padding-bottom: 50px;
+  }
+}

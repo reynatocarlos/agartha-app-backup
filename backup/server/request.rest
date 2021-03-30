@@ -1,0 +1,93 @@
+# <----- ACCOUNT SIGN UP ----->
+
+POST http://localhost:9000/api/accounts/signup
+Content-Type: application/json
+
+{
+  "username": "olajuwon",
+  "password": "asd",
+  "gender": "Male"
+}
+
+###
+
+# <----- ACCOUNT SIGN IN ----->
+
+POST http://localhost:9000/api/accounts/signin
+Content-Type: application/json
+
+{
+  "username": "marshall",
+  "password": "asd"
+}
+
+###
+
+# <----- GET USERS ----->
+
+GET http://localhost:9000/api/accounts/
+
+###
+
+# <----- GET POSTS ----->
+
+GET http://localhost:9000/api/feed/query?index=1&limit=1&user=undefined
+Content-Type: application/json
+
+###
+
+# <----- GET POST ----->
+
+GET http://localhost:9000/api/feed/post/605855e5fcfda0339c36b297
+
+###
+
+# <----- CREATE POST ----->
+
+POST http://localhost:9000/api/feed/post/create
+Content-Type: application/json
+
+{
+  "category": "None",
+  "author": "605ca43e3e187d3d30190119",
+  "content": "Hello"
+}
+
+###
+
+# <----- UPDATE POST ----->
+
+PUT http://localhost:9000/api/feed/post/605855f5fcfda0339c36b298
+Content-Type: application/json
+
+{
+  "category": "None",
+  "content": "I Love Javascript"
+}
+
+###
+
+# <----- DELETE POST ----->
+
+DELETE http://localhost:9000/api/feed/post/123
+
+{
+  "author": "sonnyparker"
+}
+
+###
+
+# <----- GET POST'S LIKE ----->
+
+GET http://localhost:9000/api/feed/post/605855c1fcfda0339c36b296/like
+
+###
+
+# <----- LIKE / DISLIKE POST ----->
+
+POST http://localhost:9000/api/feed/post/605ca4883e187d3d3019011b/like
+Content-Type: application/json
+
+{
+  "whoLike": "605ca43e3e187d3d30190119"
+}

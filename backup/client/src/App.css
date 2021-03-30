@@ -1,0 +1,50 @@
+/* <--------------- App ---------------> */
+
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.app > .spinner {
+  margin: auto;
+}
+
+.app__formContainer form > button[type=submit] > .spinner {
+  fill: white;
+}
+
+/* <--------------- App Home ---------------> */
+
+.app > .app__home {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* <--------------- Keyframes ---------------> */
+
+@keyframes modal {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* <--------------- Media Query ---------------> */
+
+@media (min-width: 530px) {
+  .app > .app__form > .app__formContainer {
+    height: 85%;
+  }
+}

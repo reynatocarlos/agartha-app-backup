@@ -1,0 +1,188 @@
+/* <--------------- Navigation ---------------> */
+
+.navigation {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+  width: 100%;
+  padding: 20px 0 15px;
+  background-color: #fff;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* <--------------- Navigation Brand Logo --------------->  */
+
+.navigation > div > .navigation__brandLogo {
+  display: none;
+}
+
+/* <--------------- Navigation First Div ---------------> */
+
+.navigation > div:first-of-type {
+  display: flex;
+  align-items: center;
+  order: 2;
+  padding-right: 20px;
+}
+
+/* <--------------- Navigation Page Label ---------------> */
+
+.navigation > .navigation__pageLabel {
+  order: 1;
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* <--------------- Navigation Buttons' Container ---------------> */
+
+.navigation > .navigation__btns {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  height: 75px;
+  padding: 20px 0;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  border: 1.4px solid var(--secondary-color);
+  background-color: #fff;
+}
+
+.navigation__btns .icon-btn {
+  display: flex;
+}
+
+/* <--------------- Account Dropdown --------------->  */
+
+.navigation__btns > .navigation__accountDropdown {
+  position: relative;
+}
+
+.navigation__btns > .navigation__accountDropdown > .account__dropdownContent {
+  position: absolute;
+  bottom: 40px;
+  right: -30.5px;
+  display: none;
+  width: 160px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Show Dropdown Content */
+.navigation__btns > .navigation__accountDropdown > .account__dropdownContent.show {
+  display: block;
+}
+
+.navigation__btns > .navigation__accountDropdown > .account__dropdownContent > li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.navigation__btns > .navigation__accountDropdown > .account__dropdownContent > li::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 38.5px;
+  z-index: 1;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.navigation__btns > .navigation__accountDropdown > .account__dropdownContent > li:nth-child(1)::after {
+  display: none;
+}
+
+.navigation__btns > .navigation__accountDropdown > .account__dropdownContent > li:hover {
+  background-color: var(--quaternary-color);
+}
+
+.navigation__btns > .navigation__accountDropdown > .account__dropdownContent > li > .icon {
+  width: 20px;
+}
+
+.navigation__btns > .navigation__accountDropdown > .account__dropdownContent > li:hover > .icon {
+  fill: var(--quaternary-color)
+}
+
+/* <--------------- Media Query ---------------> */
+
+@media (min-width: 600px) {
+  /* <----- Navigation -----> */
+
+  .navigation {
+    padding: 0;
+  }
+  
+  /* <----- Navigation First Div -----> */
+
+  .navigation > div:first-of-type {
+    display: flex;
+    order: 1;
+    gap: 20px;
+    box-sizing: border-box;
+    width: 220px;
+    padding-left: 30px;
+  }
+
+  /* <----- Navigation Brand Logo -----> */
+
+  .navigation > div > .navigation__brandLogo {
+    display: block;
+  }
+
+  /*  <----- Navigation Page Title -----> */
+
+  .navigation > .navigation__pageLabel {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  /* <----- Navigation Buttons' Container -----> */
+
+  .navigation > .navigation__btns {
+    position: relative;
+    top: 0;
+    justify-content: flex-end;
+    order: 3;
+    gap: 30px;
+    box-sizing: border-box;
+    width: 220px;
+    padding-right: 30px;
+    border: none;
+    border-radius: 0;
+  }
+
+  .navigation__btns > .navigation__accountDropdown > .account__dropdownContent {
+    bottom: -104px;
+    right: -10px;
+  }
+
+  .navigation__btns > .navigation__accountDropdown > .account__dropdownContent > li:nth-child(1)::after {
+    display: block;
+    top: -10px;
+    right: 17.5px;
+    border-color: transparent transparent #fff transparent;
+  }
+
+  .navigation__btns > .navigation__accountDropdown > .account__dropdownContent > li:nth-child(2)::after {
+    display: none;
+  }
+}

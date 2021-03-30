@@ -1,0 +1,162 @@
+/* <--------------- Variables ---------------> */
+
+:root {
+  --primary-color: #707070;
+  --secondary-color: #909090;
+  --tertiary-color: #ccc;
+  --quaternary-color: #eee;
+  --hover-color: #656565;
+  --placeholder-color: #999;
+  --icon-size: 25px;
+  --icon-btn-size: 25px;
+}
+
+/* <--------------- Global ---------------> */
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.brand-logo {
+  width: 50px;
+  stroke: var(--secondary-color) !important;
+  stroke-width: 20px;
+  stroke-miterlimit: 10;
+  fill: #fff;
+  cursor: pointer;
+}
+
+.brand-logo:hover {
+  stroke: var(--hover-color) !important;
+}
+
+.icon-btn,
+.icon {
+  width: var(--icon-btn-size);
+  stroke: var(--secondary-color) !important;
+  stroke-width: 35px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  fill: #fff;
+  cursor: pointer;
+  enable-background: new 0 0 512 512;
+}
+
+.icon-btn:hover {
+  stroke: var(--hover-color) !important;
+}
+
+/* .spinner {
+  width: 15px;
+  stroke: #fff;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 100, 200;
+  fill: none;
+} */
+
+.spinner {
+  height: fit-content;
+  fill: var(--primary-color);
+}
+
+.spinner path:nth-of-type(1) {
+  animation: pulse 1s infinite linear;
+}
+
+.spinner path:nth-of-type(2) {
+  animation: pulse 1s -.083s infinite linear;
+}
+
+.spinner path:nth-of-type(3) {
+  animation: pulse 1s -.166s infinite linear;
+}
+
+.spinner path:nth-of-type(4) {
+  animation: pulse 1s -.249s infinite linear;
+}
+
+.spinner path:nth-of-type(5) {
+  animation: pulse 1s -.332s infinite linear;
+}
+
+.spinner path:nth-of-type(6) {
+  animation: pulse 1s -.415s infinite linear;
+}
+
+.spinner path:nth-of-type(7) {
+  animation: pulse 1s -.498s infinite linear;
+}
+
+.spinner path:nth-of-type(8) {
+  animation: pulse 1s -.581s infinite linear;
+}
+
+.spinner path:nth-of-type(9) {
+  animation: pulse 1s -.664s infinite linear;
+}
+
+.spinner path:nth-of-type(10) {
+  animation: pulse 1s -.747s infinite linear;
+}
+
+.spinner path:nth-of-type(11) {
+  animation: pulse 1s -.83s infinite linear;
+}
+
+.spinner path:nth-of-type(12) {
+  animation: pulse 1s -.913s infinite linear;
+}
+
+@keyframes pulse {
+  50% { fill: #868686; }
+  to { fill: rgba(134,134,134,.4); }
+}
+
+@keyframes intro {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+  overflow-y: scroll;
+  font-family: Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+/* body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: var(--tertiary-color);
+} */

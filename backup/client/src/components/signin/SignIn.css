@@ -1,0 +1,85 @@
+/* <--------------- Sign In ---------------> */
+
+.signIn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-sizing: border-box;
+  width: 75%;
+  max-width: 360px;
+  margin-top: 30px;
+  padding: 20px;
+  border: 0.5px solid var(--secondary-color);
+}
+
+/* <--------------- Sign In Form ---------------> */
+
+.signIn > .signIn__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signIn__form > .signIn__formLabel {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.signIn__form > input {
+  padding: 5px 7px;
+  outline-color: var(--primary-color);
+}
+
+.signIn__form > input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.signIn__form > .signIn__warning {
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.signIn__form > .signIn__submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.signIn__form > .signIn__submitBtn:hover {
+  background-color: var(--primary-color);
+}
+
+.signIn__form > .signIn__submitBtn > .spinner {
+  width: 15px;
+  height: 15px;
+  fill: #fff;
+}
+
+.signIn > p {
+  font-size: 12px;
+}
+
+.signIn > p > span {
+  color: #555;
+  cursor: pointer;
+}
+
+.signIn > p > span:hover {
+  text-decoration: underline;
+}
+
+/* <--------------- Media Query ---------------> */
+
+@media (min-width: 900px) {
+  /* <----- Sign In -----> */
+
+  .signIn {
+    margin-top: 0;
+  }
+}

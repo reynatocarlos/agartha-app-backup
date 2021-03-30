@@ -1,0 +1,89 @@
+/* <--------------- Sign Up ---------------> */
+
+.signUp {
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+  box-sizing: border-box;
+  width: 75%;
+  max-width: 360px;
+  padding: 20px;
+  border: 0.5px solid var(--secondary-color);
+}
+
+/* <--------------- Sign Up Form ---------------> */
+
+.signUp > .signUp__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signUp__form > .signUp__formLabel {
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.signUp__form > input {
+  padding: 5px 7px;
+  outline-color: var(--primary-color);
+}
+
+.signUp__form > input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.signUp__form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.signUp__form > div > label {
+  text-align: start;
+  font-size: 13.5px;
+}
+
+.signUp__form > div > select {
+  padding: 5px 7px;
+  outline-color: var(--primary-color);
+}
+
+.signUp__form > .signUp__warning {
+  margin-bottom: -5px;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.signUp__form > .signUp__submitBtn {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.signUp__form > .signUp__submitBtn:hover {
+  background-color: var(--primary-color);
+}
+
+.signUp__form > .signUp__submitBtn > .spinner {
+  width: 15px;
+  height: 15px;
+  fill: #fff;
+}
+
+.signUp > p {
+  font-size: 12px;
+}
+
+.signUp > p > span {
+  color: #555;
+  cursor: pointer;
+}
+
+.signUp > p > span:hover {
+  text-decoration: underline;
+}
